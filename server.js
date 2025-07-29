@@ -1,6 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose';
-import bodyParser from 'express';
+//import bodyParser from 'express';
 import userRouter from './Routes/user.js'
 import productRouter from './Routes/product.js'
 import cartRouter from './Routes/cart.js'
@@ -11,7 +11,7 @@ import cors from 'cors';
 
 
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.use(cors({
     origin:['http://localhost:5173',

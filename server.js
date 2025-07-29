@@ -1,6 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose';
-//import bodyParser from 'express';
+import bodyParser from 'express';
 import userRouter from './Routes/user.js'
 import productRouter from './Routes/product.js'
 import cartRouter from './Routes/cart.js'
@@ -15,7 +15,9 @@ app.use(express.json());
 
 app.use(cors({
     origin:['http://localhost:5173',
-     'https://www.nandniraj.in'   
+     'https://www.nandniraj.in', 
+   'https://mern-e-commerce-9opy.onrender.com'
+
     ],
     methods:["GET" , "POST" , "PUT" , "DELETE"],
     credentials:true
